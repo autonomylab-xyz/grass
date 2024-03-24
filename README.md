@@ -2,6 +2,8 @@
 An unofficial Docker Image for [getgrass.io](https://app.getgrass.io/register/?referralCode=33pl75DeDNvyWsA)
 Available on [Docker Hub](https://hub.docker.com/r/autonomylabxyz/grass)
 
+[Docker setup instructions](https://docs.docker.com/get-docker/)
+
 ## What's Grass?
 Grass allows you to earn passive income by sharing your network bandwidth
 
