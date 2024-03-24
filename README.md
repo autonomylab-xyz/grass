@@ -38,7 +38,7 @@ docker run -d \
     -e GRASS_USER=myuser@mail.com \
     -e GRASS_PASS=mypass \
     -e ALLOW_DEBUG=False \
-    autonomylabxyz/grass
+    autonomylabxyz/grass:latest
 ```
 
 Please replace 8080 with the port you want to be able to access the status with, as well as GRASS_USER and GRASS_PASS
@@ -56,10 +56,24 @@ docker run -d \
     -e GRASS_PASS=mypass \
     -e ALLOW_DEBUG=False \
     grass
-
 ```
 
 Please replace 8080 with the port you want to be able to access the status with, as well as GRASS_USER and GRASS_PASS
+
+### Docker Run from local build
+```
+docker build grass:latest .
+```
+```
+    --name Grass \
+    -p 8080:80 \
+    -e GRASS_USER=myuser@mail.com \
+    -e GRASS_PASS=mypass \
+    -e ALLOW_DEBUG=False \
+    grass
+
+```
+
 
 ## License
 This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
