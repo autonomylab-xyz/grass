@@ -13,7 +13,20 @@ Grass allows you to earn passive income by sharing your network bandwidth
 3. You're good to go! Once started, the docker exposes your current network status and lifetime earnings on port 80
 
 
-### Docker Compose from remote
+### Docker Run command
+```
+docker run -d \
+    --name Grass \
+    -p 8080:80 \
+    -e GRASS_USER=myuser@mail.com \
+    -e GRASS_PASS=mypass \
+    -e ALLOW_DEBUG=False \
+    autonomylabxyz/grass:latest
+```
+
+Please replace 8080 with the port you want to be able to access the status with, as well as GRASS_USER and GRASS_PASS
+
+### Docker Compose
 ```
 version: "3.0"
 
@@ -33,21 +46,7 @@ services:
 docker-compose up -d
 ```
 
-### Docker Run from remote
-```
-docker run -d \
-    --name Grass \
-    -p 8080:80 \
-    -e GRASS_USER=myuser@mail.com \
-    -e GRASS_PASS=mypass \
-    -e ALLOW_DEBUG=False \
-    autonomylabxyz/grass:latest
-```
-
-Please replace 8080 with the port you want to be able to access the status with, as well as GRASS_USER and GRASS_PASS
-
-
-### Docker Run from local build
+### Build local image & run
 ```
 docker build grass:latest .
 ```
