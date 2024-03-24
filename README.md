@@ -13,11 +13,12 @@ Grass allows you to earn passive income by sharing your network bandwidth
 
 ### Docker Compose from remote
 ```
-version "3.0"
+version: "3.0"
 
 services:
-  grass;
+  grass:
     image: autonomylabxyz/grass:latest
+    container_name: Grass
     ports:
       - 8080:80
     environment:
@@ -59,21 +60,6 @@ docker run -d \
 ```
 
 Please replace 8080 with the port you want to be able to access the status with, as well as GRASS_USER and GRASS_PASS
-
-### Docker Run from local build
-```
-docker build grass:latest .
-```
-```
-docker run -d \
-    --name Grass \
-    -p 8080:80 \
-    -e GRASS_USER=myuser@mail.com \
-    -e GRASS_PASS=mypass \
-    -e ALLOW_DEBUG=False \
-    grass
-
-```
 
 
 ## License
