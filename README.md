@@ -1,3 +1,5 @@
+<meta name="google-site-verification" content="BBR8ec-1-3vrm059z1vNyfwMsN2gWZjneRsjsGSqKRA" />
+
 # Grass
 An unofficial Docker Image for [getgrass.io](https://app.getgrass.io/register/?referralCode=33pl75DeDNvyWsA)
 Available on [Docker Hub](https://hub.docker.com/r/autonomylabxyz/grass)
