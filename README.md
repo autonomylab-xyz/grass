@@ -46,9 +46,11 @@ services:
 docker-compose up -d
 ```
 
+> For arm devices change :latest to :arm64v8
+
 ### Build local image & run
 ```
-docker build grass:latest .
+docker build -t grass .
 ```
 ```
 docker run -d \
@@ -59,6 +61,10 @@ docker run -d \
     -e ALLOW_DEBUG=False \
     grass
 ```
+
+> For arm devices update the Dockerfile from alpine:3.19
+to arm64v8/alpine:3.19
+
 
 Please replace 8080 with the port you want to be able to access the status with, as well as GRASS_USER and GRASS_PASS
 
